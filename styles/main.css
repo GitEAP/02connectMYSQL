@@ -112,14 +112,14 @@ body {
   .nav .active {
     background-color: #edc7b7; }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 566px) {
   .headerWrapper {
     height: 300px; }
     .headerWrapper h1 {
       padding-top: 30px; }
 
   .nav {
-    width: 470px;
+    width: 560px;
     background-color: none;
     margin-top: 75px;
     margin-left: auto;
