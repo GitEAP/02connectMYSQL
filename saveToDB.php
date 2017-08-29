@@ -72,15 +72,9 @@ mail($to, $subject, $message, 'FROM:' . $email);
 </main>
 	
 	
-	
-	
-	
-	
 <footer>
 	<p>&copy; 2017 &bull; Erick Perez</p>
 </footer>
-	
-	
 	
 	
 </body>
