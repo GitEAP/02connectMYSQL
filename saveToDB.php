@@ -4,13 +4,23 @@ $name = $_POST[name];
 $phone = $_POST[phone];
 $email = $_POST[email];
 
+$dropDown = $_POST[contactDropdown];
+$contactMessage = $_POST[contactMessage];
+
 //Build database connection with host, user, pass, database
+$dbconnection = mysqli_connect('localhost', 'erickper_3760usr', 'OcaC)hJzA}Wd', 'erickper_3760') or die ('connection failed');
+
 
 //build the querry
+$queryDB = "INSERT INTO yogurt_inquires (name, phone, email, contact, message) VALUES ('$name', $phone,'$email','$dropDown','$contactMessage')";
+
 
 //try and talk to the database
+$result = mysqli_query($dbconnection, $queryDB) or die ('querry failed');
 
 //we're done so hang up
+mysqli_close($dbconnection);
+
 ?>
 
 <!doctype html>
@@ -54,8 +64,7 @@ $email = $_POST[email];
 <main class="default">
 <h1>Thank you for your message. We will contact you with additional information.</h1>
 
-
-<p>You will be returned to the pre-order page...</p>
+<p>You will be returned to the contact us page...</p>
 </main>
 	
 	
