@@ -1,4 +1,5 @@
 <?php
+require_once('connectvars.php');
 //variables from the form
 $name = $_POST[name];
 $phone = $_POST[phone];
@@ -8,8 +9,7 @@ $dropDown = $_POST[contactDropdown];
 $contactMessage = $_POST[contactMessage];
 
 //Build database connection with host, user, pass, database
-$dbconnection = mysqli_connect('localhost', 'erickper_3760usr', 'OcaC)hJzA}Wd', 'erickper_3760') or die ('connection failed');
-
+$dbconnection = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME) or die ('connection failed');
 
 //build the querry
 $queryDB = "INSERT INTO yogurt_inquires (name, phone, email, contact, message) VALUES ('$name', $phone,'$email','$dropDown','$contactMessage')";
